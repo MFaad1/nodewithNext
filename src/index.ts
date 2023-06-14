@@ -24,7 +24,7 @@ app.post('/data',(req: Request, res: Response)=>{
           })
             .then((response:any) => {
                return response.data
-               
+                
             })
             .catch((error:Error) => {
               console.error(error);
@@ -111,7 +111,7 @@ app.post('/data',(req: Request, res: Response)=>{
        }
        
        addData(input)
-       .then(response=> {
+       .then((response:any)=> {
        return res.status(200).json({
         data: response
        })
