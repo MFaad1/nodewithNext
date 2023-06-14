@@ -12,7 +12,7 @@ app.get('/Api', async(req: Request, res: Response) => {
 
 app.post('/data',(req: Request, res: Response)=>{
     const {input} = req.body;
-    console.log(input,'Input Data')
+    console.log(input,'Input Data !')
 
     let fetchData=()=>{
         return axios.get('https://serpapi.com/search?engine=google_maps', {
