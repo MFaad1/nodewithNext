@@ -46,12 +46,11 @@ var app = (0, express_1.default)();
 app.use(cors());
 app.use(express_1.default.json());
 app.get('/', function (req, res) {
-    res.send('this is the respone from backend');
+    return res.send('this is the respone from backend');
 });
 app.get('/about', function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
     return __generator(this, function (_a) {
-        res.send('This is the reponse from Node js').status(200);
-        return [2 /*return*/];
+        return [2 /*return*/, res.send('This is the reponse from Node js').status(200)];
     });
 }); });
 app.post('/data', function (req, res) {

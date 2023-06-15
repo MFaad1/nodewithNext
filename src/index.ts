@@ -7,11 +7,11 @@ app.use(cors())
 app.use(express.json())
 
 app.get('/', (req: Request, res: Response)=>{
-  res.send('this is the respone from backend')
+  return res.send('this is the respone from backend')
 })
 
 app.get('/about', async(req: Request, res: Response) => {
-    res.send('This is the reponse from Node js').status(200);
+   return  res.send('This is the reponse from Node js').status(200);
 });
 
 app.post('/data',(req: Request, res: Response)=>{
