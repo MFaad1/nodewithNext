@@ -45,7 +45,10 @@ var axios_1 = __importDefault(require("axios"));
 var app = (0, express_1.default)();
 app.use(cors());
 app.use(express_1.default.json());
-app.get('/Api', function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+app.get('/', function (req, res) {
+    res.send('this is the respone from backend');
+});
+app.get('/about', function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
     return __generator(this, function (_a) {
         res.send('This is the reponse from Node js').status(200);
         return [2 /*return*/];
@@ -53,7 +56,6 @@ app.get('/Api', function (req, res) { return __awaiter(void 0, void 0, void 0, f
 }); });
 app.post('/data', function (req, res) {
     var input = req.body.input;
-    console.log(input, 'Input Data !');
     var fetchData = function () {
         return axios_1.default.get('https://serpapi.com/search?engine=google_maps', {
             params: {
