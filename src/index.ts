@@ -6,13 +6,13 @@ const app = express();
 app.use(cors())
 app.use(express.json())
 
-app.get('/', (req: Request, res: Response)=>{
-  return res.send('this is the respone from Node Backend')
-})
+// app.get('/', (req: Request, res: Response)=>{
+//   return res.send('this is the respone from Node Backend')
+// })
 
-app.get('/about', async(req: Request, res: Response) => {
-   return  res.send('This is the reponse from Node js').status(200);
-});
+// app.get('/about', async(req: Request, res: Response) => {
+//    return  res.send('This is the reponse from Node js').status(200);
+// });
 
 app.post('/data',(req: Request, res: Response)=>{
     const {input} = req.body;
